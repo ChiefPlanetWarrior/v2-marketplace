@@ -19,11 +19,13 @@
     "nextjs-progressbar": "^0.0.16",
     "react": "^18.2",
     "react-dom": "^18.2",
-    "react-hook-form": "^7.43.9"
+    "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "18.2.5",
     "eslint": "8.11.0",
-    "eslint-config-next": "^13"
+    "eslint-config-next": "^13",
+    "typescript": "^5.0.4"
   }
 }

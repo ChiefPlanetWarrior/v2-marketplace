@@ -21,7 +21,7 @@ import styles from "../../../styles/Token.module.css";
 import Link from "next/link";
 import randomColor from "../../../util/randomColor";
 import Skeleton from "../../../components/Skeleton/Skeleton";
-import toast, { Toaster } from "react-hot-toast";
+//import toast, { Toaster } from "react-hot-toast";
 import toastStyle from "../../../util/toastConfig";
 
 type Props = {
@@ -114,9 +114,13 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     return txResult;
   }
 
+  function toast(arg0: string, arg1: { icon: string; style: { borderRadius: string; background: string; color: string; "white-space": string; "word-break": string; }; position: string; }) {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <>
-      <Toaster position="bottom-center" reverseOrder={false} />
+      
       <Container maxWidth="lg">
         <div className={styles.container}>
           <div className={styles.metadataContainer}>
