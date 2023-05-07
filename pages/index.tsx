@@ -50,7 +50,7 @@ const Home: NextPage = () => {
                 >
                   PS2O
                 </Link>{" "}
-                is the missing element needed to stop & reverse climate change! <b>hours</b>, <i>not months</i>.
+                is the missing element needed to stop & reverse climate change!<b>hours</b>, <i>not months</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
