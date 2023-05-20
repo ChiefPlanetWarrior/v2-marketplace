@@ -14,16 +14,25 @@
   "dependencies": {
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
+    "@unlock-protocol/contracts": "^0.0.22",
     "ethers": "^5",
+    "file-loader": "^6.2.0",
+    "ipfs-http-client": "^60.0.0",
     "next": "^13",
     "nextjs-progressbar": "^0.0.16",
+    "pdfjs-dist": "^3.6.172",
     "react": "^18.2",
     "react-dom": "^18.2",
     "react-hook-form": "^7.43.9",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "react-modal": "^3.16.1",
+    "react-pdf": "^6.2.2",
+    "styled-components": "^6.0.0-rc.1"
   },
   "devDependencies": {
     "@types/react": "18.2.5",
+    "@types/react-modal": "^3.16.0",
+    "@types/styled-components": "^5.1.26",
     "eslint": "8.11.0",
     "eslint-config-next": "^13",
     "typescript": "^5.0.4"

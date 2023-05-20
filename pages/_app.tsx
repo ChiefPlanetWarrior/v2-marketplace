@@ -1,9 +1,12 @@
 import type { AppProps } from "next/app";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
-import { Navbar } from "../components/Navbar/Navbar";
-import NextNProgress from "nextjs-progressbar";
-import { NETWORK } from "../const/contractAddresses";
+import { ThemeProvider } from "styled-components";
 import "../styles/globals.css";
+import { NETWORK } from "../const/contractAddresses";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import NextNProgress from "nextjs-progressbar";
+import {Navbar} from "../components/Navbar/Navbar";
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -21,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       {/* Render the actual component (page) */}
       <Component {...pageProps} />
-    </ThirdwebProvider>
+      </ThirdwebProvider>
   );
 }
 

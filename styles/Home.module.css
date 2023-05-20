@@ -52,15 +52,15 @@
 
 .heroAssetFrame {
   display: flex;
-  justify-content: center;
-  margin: 24px auto 0;
-  padding: 2em;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   overflow: hidden;
 }
 
 .heroAsset {
   max-width: 100vw;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 .heroBodyContainer {
@@ -308,14 +308,13 @@
     width: 100%;
   }
 
-  .heroTitle {
-  }
+ 
 }
 
 /* Less than 640 px */
 @media (max-width: 640px) {
   .gradient {
-    margin-top: 256px;
+    margin-top: 100px;
   }
 
   .heroTitle {
@@ -336,7 +335,7 @@
 /* Above 640 and less than 960 */
 @media (min-width: 640px) and (max-width: 960px) {
   .gradient {
-    margin-top: 196px;
+    margin-top: 1px;
   }
 
   .heroTitle {
@@ -347,4 +346,126 @@
   .heroAsset {
     max-height: 540px;
   }
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.galleryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ffffff; /* Add this line for the border */
+  padding: 1rem; /* Add some padding around the content */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+.title {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 0.5rem;
+  max-width: 90%; /* Add this line to limit the description width */
+  word-wrap: break-word; /* Add this line to wrap the text */
+}
+
+.price {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.attributes {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.attribute {
+  text-align: left;
+}
+
+.attributeKey {
+  font-weight: bold;
+}
+
+.attributeValue {
+  font-weight: normal;
+
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Adjust the max-width value to fit your desired container width */
+}
+.toprow {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bottomrow {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/* Apply custom styles to the last column in the row */
+.column:last-child {
+  margin-bottom: 0;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.col_md_6 {
+  flex: 0 0 50%; /* Update the flex value to occupy 50% of the row's width */
+  max-width: 50%; /* Update the max-width to occupy 50% of the row's width */
+}
+
+.column_border {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.bulletList {
+  text-align: left;
+}
+
+.customList li {
+  font-size: 20px; /* Adjust this value to increase or decrease the font size */
+}
+.pulsatingTitle {
+  animation: pulsate 2s infinite;
+  font-size: 78px;
+}
+.betaText {
+  font-size: 0.2em; /* Adjust to suit your design */
+  color: green; /* Adjust color to suit your design */
+  vertical-align: super; /* This isn't strictly necessary as <sup> defaults to this */
+}
+.subText {
+  font-size: 0.6em; /* Adjust to suit your design */
+  color: green; /* Adjust color to suit your design */
+  vertical-align: sub; /* This isn't strictly necessary as <sup> defaults to this */
 }

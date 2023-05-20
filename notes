@@ -1,0 +1,160 @@
+import type { NextPage } from "next";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { useState } from 'react';
+import { useContract, useNFTs } from "@thirdweb-dev/react";
+import React from "react";
+import Container from "./components/Container/Container";
+import NFTGrid from "./components/NFT/NFTGrid";
+import { NFT_COLLECTION_ADDRESS } from "./const/contractAddresses";
+import galleryStyles from "../styles/Gallery.module.css";
+import descriptionStyles from "../styles/Description.module.css";
+
+//import { usePaywall } from '@unlock-protocol/react';
+//import unlock from "@unlock-protocol/contracts/abis/Unlock";
+
+
+
+
+
+/**
+ * Landing page with a simple gradient background and a hero asset.
+ * Free to customize as you see fit.
+ */
+const Home: NextPage = () => {
+  //const { open } = usePaywall(paywallConfig);
+  return (
+        <div className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.hero}>
+          <div className={styles.heroBackground}>
+            <div className={styles.heroBackgroundInner}>
+          
+            </div>
+          </div>
+          <div className={styles.heroAssetFrame}>
+            <Image
+              src="/Primary PS2O Logo.png"
+              width={350}
+              height={270}
+              alt="Hero asset, NFT marketplace"
+              quality={100}
+              className={styles.heroAsset}
+            />
+          </div>
+          <div className={styles.heroBodyContainer}>
+            <div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.heroTitleGradient}>
+                  The Path to Net Zero!
+                </span>
+              </h1>
+              <div className={galleryStyles.gallery}>
+        <div className={galleryStyles.galleryItem}>
+          <Image src="/VPP.png" width={200} height={200} alt="VPP" />
+          <h3 className={galleryStyles.title}>Virtual Power Plant</h3>
+        </div>
+        <div className={galleryStyles.galleryItem}>
+          <Image src="/Bio-gas.png" width={200} height={200} alt="ESG" />
+          <h3 className={galleryStyles.title}>Bio-gas Farm</h3>
+        </div>
+        <div className={galleryStyles.galleryItem}>
+          <Image src="/eMowers.png" width={200} height={200} alt="HER" />
+          <h3 className={galleryStyles.title}>eMower Squadron</h3>
+        </div>
+        <div className={galleryStyles.galleryItem}>
+          <Image src="/Print Farm.png" width={200} height={200} alt="H2O" />
+          <h3 className={galleryStyles.title}>3D Print Farm</h3>
+        </div>
+        <div className={galleryStyles.galleryItem}>
+          <Image src="/Aquafarm.png" width={200} height={200} alt="NFT" />
+          <h3 className={galleryStyles.title}>3D Aquafarm</h3>
+        
+      </div>
+      </div>
+      <div className={descriptionStyles.descriptionContainer}>
+        <h2 className={descriptionStyles.descriptionTitle}>Project Description</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor metus justo, ut fringilla metus scelerisque et.</p>
+        <div className={descriptionStyles.attributesContainer}>
+          <div className={descriptionStyles.attribute}>
+            <h3 className={descriptionStyles.attributeTitle}>Attribute 1</h3>
+            <p>Value 1</p>
+          </div>
+          <div className={descriptionStyles.attribute}>
+            <h3 className={descriptionStyles.attributeTitle}>Attribute 2</h3>
+            <p>Value 2</p>
+          </div>
+          <div className={descriptionStyles.attribute}>
+            <h3 className={descriptionStyles.attributeTitle}>Attribute 3</h3>
+            <p>Value 3</p>
+          </div>
+        </div>
+      </div>
+                <p className={styles.heroSubtitle}>
+                <Link
+                  className={styles.link}
+                  href="https://app.unlock-protocol.com/checkout?id=84ab0539-a4d0-46a1-853d-c83082cd794b"
+                  target="_blank"
+                >
+                  Claim Now
+                </Link>{" "}
+                    </p>
+
+              <div className={styles.heroCtaContainer}>
+                <Link className={styles.heroCta} href="/claim">
+                  Claim Your Future
+                </Link>
+                <Link
+                  className={styles.secondaryCta}
+                  href="https://www.ps2o.io"
+                  target="_blank"
+                >
+                  Join The DAO (Limited)
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+//Row Objects
+<div className={styles.toprow}>
+      <div className={`${styles.col} ${styles.col_md_4} ${styles.column_border}`}>
+      <h2>Problem</h2>
+      <h4>
+        To avoid a total climate disaster, the planet needs to reach NET ZERO greenhouse gas emissions as soon as
+        possible.
+      </h4>
+    </div>
+    <div className={`${styles.col} ${styles.col_md_4} ${styles.column_border}`}>
+      <h2>Mission</h2>
+      <h4>
+        With&nbsp;
+        <Link className={styles.link} href="https://app.unlock-protocol.com/checkout?id=84ab0539-a4d0-46a1-853d-c83082cd794b" target="_blank">
+          <b>Project Drawdown's Solutions</b>
+        </Link>
+        &nbsp;as a guide, facilitate the world's path to net zero carbon emissions using available technology, proven
+        sciences, and validated methods while accomplishing all 17 United Nation's Sustainable Development Goals.
+      </h4>
+    </div>
+  </div>
+
+
+<div className={`${styles.row} ${styles.bottomrow}`}>
+<div className={`${styles.col} ${styles.col_md_4} ${styles.column_border}`}>
+  <h2>How?</h2>
+  <ul className={`${styles.bulletList} ${styles.customList}`}>
+    <li>You Fund a Project</li>
+    <li>Project Reduces CO2e</li>
+    <li>Project Generates Revenue dddddddddddddddddddddddddddd</li>
+    <li>You're Gifted 72% Revenue</li>
+  </ul>
+</div>
+</div>

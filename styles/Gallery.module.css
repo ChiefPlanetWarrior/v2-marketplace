@@ -1,0 +1,118 @@
+/* ... other styles ... */
+
+/* .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.galleryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content; /* Add this line to limit the container width to the content */
+  /*padding: 1rem;
+  border: 2px solid #ccc; /* Add this line */
+  /*border-radius: 8px; /* Add this line for rounded corners */
+/*} */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.galleryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ccc; /* Add this line */
+  border-radius: 8px; /* Add this line for rounded corners */
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Responsive media queries */
+@media (min-width: 480px) {
+  .galleryItem {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .galleryItem {
+    width: calc(33.33% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .galleryItem {
+    width: calc(25% - 1rem);
+  }
+}
+
+
+
+.title {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 0.1rem;
+  max-width: 30%; /* Add this line to limit the description width */
+  word-wrap: break-word; /* Add this line to wrap text if needed */
+}
+
+.price {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.attributes {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.attribute {
+  text-align: left;
+}
+
+.attributeKey {
+  font-weight: bold;
+}
+
+.attributeValue {
+  font-weight: normal;
+  text-align: right;
+}
+.button {
+  background-color: #0e9350;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(1px);
+}

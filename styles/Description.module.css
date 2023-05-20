@@ -1,0 +1,34 @@
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    max-width: 250px;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .descriptionTitle {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .attributesContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .attribute {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 30%;
+    margin-bottom: 1rem;
+  }
+  
+  .attributeTitle {
+    font-weight: bold;
+  }
+  
