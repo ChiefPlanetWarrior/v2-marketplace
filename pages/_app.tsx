@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import { NETWORK } from "../const/contractAddresses";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import NextNProgress from "nextjs-progressbar";
-import {Navbar} from "../components/Navbar/Navbar";
+import { Navbar } from "../components/Navbar/Navbar";
 
 
 
@@ -20,11 +20,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         showOnShallow={true}
       />
 
-      {/* Render the navigation menu above each component */}
-      <Navbar />
-      {/* Render the actual component (page) */}
-      <Component {...pageProps} />
-      </ThirdwebProvider>
+      {<Navbar />}
+
+      {<Component {...pageProps} />}
+
+    </ThirdwebProvider>
   );
 }
 

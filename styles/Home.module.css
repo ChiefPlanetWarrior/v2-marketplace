@@ -96,7 +96,7 @@
 
 .heroSubtitle {
   max-width: 640px;
-  margin: 0 0 40px;
+  margin: 0 0 px;
   color: hsla(0, 0%, 100%, 0.4);
   font-size: Min(3.8vw, 20px);
   letter-spacing: 0.3px;
@@ -193,10 +193,10 @@
     var(--color-quaternary) 304.32deg,
     var(--color-primary) 473.23deg
   );
-  border-radius: 6px;
+  border-radius: 0px;
   content: "";
-  filter: blur(20px);
-  opacity: 0.6;
+  filter: blur(0px);
+  opacity: 0.0;
 }
 
 .heroCta:hover {
@@ -307,8 +307,6 @@
   .tab {
     width: 100%;
   }
-
- 
 }
 
 /* Less than 640 px */
@@ -468,4 +466,14 @@
   font-size: 0.6em; /* Adjust to suit your design */
   color: green; /* Adjust color to suit your design */
   vertical-align: sub; /* This isn't strictly necessary as <sup> defaults to this */
+}
+.heroImageContainer {
+  margin-top: 16px; /* Add margin-top to create space between the image and the subtitle */
+  display: flex;
+  justify-content: center;
+}
+
+.heroAsset {
+  max-width: 100%; /* Remove the previous max-width value to allow the image to expand */
+  height: auto; /* Let the image adjust its height automatically */
 }
