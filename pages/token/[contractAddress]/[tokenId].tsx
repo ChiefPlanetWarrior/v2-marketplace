@@ -135,18 +135,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               <h3 className={styles.descriptionTitle}>Phase I</h3>
 
-              <div className={styles.traitsContainer}>
-                {Object.entries(nft.metadata.attributes || {}).map(
-                  ([key, value]) => (
-                    <div className={styles.traitContainer} key={key}>
-                      <p className={styles.traitName}>{key}</p>
-                      <p className={styles.traitValue}>
-                        {value?.toString() || "Trait value missing"}
-                      </p>
-                    </div>
-                  )
-                )}
-              </div>
+             
 
               <h3 className={styles.descriptionTitle}>History</h3>
 
@@ -336,3 +325,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: "blocking", // can also be true or 'blocking'
   };
 };
+
+/* <div className={styles.traitsContainer}>
+{Object.entries(nft.metadata.attributes || {}).map(
+  ([key, value]) => (
+    <div className={styles.traitContainer} key={key}>
+      <p className={styles.traitName}>{key}</p>
+      <p className={styles.traitValue}>
+        {value?.toString() || "Trait value missing"}
+      </p>
+    </div>
+  )
+)}
+</div>*/
