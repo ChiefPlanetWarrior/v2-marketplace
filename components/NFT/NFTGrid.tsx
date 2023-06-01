@@ -4,7 +4,7 @@ import React from "react";
 import { NFT_COLLECTION_ADDRESS } from "../../const/contractAddresses";
 import Skeleton from "../Skeleton/Skeleton";
 import NFT from "./NFT";
-import styles from "../../styles/subDAO.module.css";
+import styles from "../../styles/Claim.module.css";
 
 type Props = {
   isLoading: boolean;

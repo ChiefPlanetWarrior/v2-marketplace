@@ -65,7 +65,7 @@ export default function Sell() {
               Token ID #{selectedNft.metadata.id}
             </p>
 
-
+            
           </div>
         </div>
       )}

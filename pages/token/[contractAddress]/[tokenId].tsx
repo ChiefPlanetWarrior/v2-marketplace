@@ -120,7 +120,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   return (
     <>
-      
+
       <Container maxWidth="lg">
         <div className={styles.container}>
           <div className={styles.metadataContainer}>
@@ -135,7 +135,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               <h3 className={styles.descriptionTitle}>Phase I</h3>
 
-             
+
 
               <h3 className={styles.descriptionTitle}>History</h3>
 
@@ -241,11 +241,11 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                   )}
                 </div>
 
-                
+
               </div>
             </div>
 
-            {loadingContract || loadingDirect  ? (
+            {loadingContract || loadingDirect ? (
               <Skeleton width="100%" height="164" />
             ) : (
               <>
@@ -293,7 +293,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     contractMetadata = await contract.metadata.get();
-  } catch (e) {}
+  } catch (e) { }
 
   return {
     props: {
