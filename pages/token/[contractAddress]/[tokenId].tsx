@@ -120,7 +120,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   return (
     <>
-      
+
       <Container maxWidth="lg">
         <div className={styles.container}>
           <div className={styles.metadataContainer}>
@@ -135,18 +135,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               <h3 className={styles.descriptionTitle}>Phase I</h3>
 
-              <div className={styles.traitsContainer}>
-                {Object.entries(nft.metadata.attributes || {}).map(
-                  ([key, value]) => (
-                    <div className={styles.traitContainer} key={key}>
-                      <p className={styles.traitName}>{key}</p>
-                      <p className={styles.traitValue}>
-                        {value?.toString() || "Trait value missing"}
-                      </p>
-                    </div>
-                  )
-                )}
-              </div>
+
 
               <h3 className={styles.descriptionTitle}>History</h3>
 
@@ -252,11 +241,11 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                   )}
                 </div>
 
-                
+
               </div>
             </div>
 
-            {loadingContract || loadingDirect  ? (
+            {loadingContract || loadingDirect ? (
               <Skeleton width="100%" height="164" />
             ) : (
               <>
@@ -304,7 +293,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   try {
     contractMetadata = await contract.metadata.get();
-  } catch (e) {}
+  } catch (e) { }
 
   return {
     props: {
@@ -336,3 +325,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: "blocking", // can also be true or 'blocking'
   };
 };
+
+/* <div className={styles.traitsContainer}>
+{Object.entries(nft.metadata.attributes || {}).map(
+  ([key, value]) => (
+    <div className={styles.traitContainer} key={key}>
+      <p className={styles.traitName}>{key}</p>
+      <p className={styles.traitValue}>
+        {value?.toString() || "Trait value missing"}
+      </p>
+    </div>
+  )
+)}
+</div>*/

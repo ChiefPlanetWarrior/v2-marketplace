@@ -10,7 +10,10 @@ import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
 import NFTGrid from "../../components/NFT/NFTGrid";
 import Skeleton from "../../components/Skeleton/Skeleton";
-import {MARKETPLACE_ADDRESS, NFT_COLLECTION_ADDRESS,} from "../../const/contractAddresses";
+import {
+  MARKETPLACE_ADDRESS,
+  NFT_COLLECTION_ADDRESS,
+} from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
 
@@ -23,7 +26,7 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 
 export default function ProfilePage() {
   const router = useRouter();
-  const [tab, setTab] = useState<"nfts" | "listings">("nfts");
+  const [tab, setTab] = useState<"nfts" | "listings" | "auctions">("nfts");
 
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
 
@@ -42,7 +45,10 @@ export default function ProfilePage() {
       seller: router.query.address as string,
     });
 
-
+  const { data: auctionListings, isLoading: loadingAuctions } =
+    useValidEnglishAuctions(marketplace, {
+      seller: router.query.address as string,
+    });
 
   return (
     <Container maxWidth="lg">
@@ -72,18 +78,25 @@ export default function ProfilePage() {
 
       <div className={styles.tabs}>
         <h3
-          className={`${styles.tab}
+          className={`${styles.tab} 
         ${tab === "nfts" ? styles.activeTab : ""}`}
           onClick={() => setTab("nfts")}
         >
           NFTs
         </h3>
         <h3
-          className={`${styles.tab}
+          className={`${styles.tab} 
         ${tab === "listings" ? styles.activeTab : ""}`}
           onClick={() => setTab("listings")}
         >
           Listings
+        </h3>
+        <h3
+          className={`${styles.tab}
+        ${tab === "auctions" ? styles.activeTab : ""}`}
+          onClick={() => setTab("auctions")}
+        >
+          Auctions
         </h3>
       </div>
 
@@ -110,6 +123,22 @@ export default function ProfilePage() {
           <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
         ) : (
           directListings?.map((listing) => (
+            <ListingWrapper listing={listing} key={listing.id} />
+          ))
+        )}
+      </div>
+
+      <div
+        className={`${
+          tab === "auctions" ? styles.activeTabContent : styles.tabContent
+        }`}
+      >
+        {loadingAuctions ? (
+          <p>Loading...</p>
+        ) : auctionListings && auctionListings.length === 0 ? (
+          <p>Nothing for sale yet! Head to the sell tab to list an NFT.</p>
+        ) : (
+          auctionListings?.map((listing) => (
             <ListingWrapper listing={listing} key={listing.id} />
           ))
         )}

@@ -12,6 +12,9 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@reach/dialog": "^0.18.0",
+    "@thirdweb-dev/auth": "^3.0.21",
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
     "@unlock-protocol/contracts": "^0.0.22",
@@ -36,5 +39,10 @@
     "eslint": "8.11.0",
     "eslint-config-next": "^13",
     "typescript": "^5.0.4"
+  },
+    "main": "dist/thirdweb-dev-auth-next-auth.cjs.js",
+    "module": "dist/thirdweb-dev-auth-next-auth.esm.js",
+    "browser": {
+      "./dist/thirdweb-dev-auth-next-auth.esm.js": "./dist/thirdweb-dev-auth-next-auth.browser.esm.js"
+    }
   }
-}
