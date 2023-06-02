@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/exchange.module.css";
+import styles from "../styles/Exchange.module.css";
 
 const Exchange: React.FC = () => {
   return (
