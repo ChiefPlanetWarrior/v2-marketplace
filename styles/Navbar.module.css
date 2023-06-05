@@ -87,9 +87,50 @@
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
-/* Sreens less than 720px */
+/* Screens less than or equal to 720px */
+@media (max-width: 720px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .navLeft {
+    flex-basis: 100%;
+  }
+
+  .navMiddle {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .navRight {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+}
+
+/* Screens less than or equal to 500px */
 @media (max-width: 500px) {
-  .navConnect {
-    display: none !important;
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navMiddle {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .navRight {
+    margin-top: 16px;
+    justify-content: flex-start;
+  }
+
+  .homeLink {
+    font-size: 20px;
+  }
+
+  .link {
+    font-size: 14px;
   }
 }

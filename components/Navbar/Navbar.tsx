@@ -50,7 +50,7 @@ const AboutDialog = ({ isOpen, onClose }) => {
         sustainable future.
 
             <div className={styles.link}>
-              <Link href="https://gateway.pinata.cloud/ipfs/QmTmFcqAb4rVkRCvsYzr2sY2eyKxq4teyHJqpDZgSbGpN4">
+              <Link href="https://gateway.pinata.cloud/ipfs/QmTmFcqAb4rVkRCvsYzr2sY2eyKxq4teyHJqpDZgSbGpN4" target="_blank" rel="noopener noreferrer">
                 Privacy Policy
               </Link>
             </div>
@@ -105,8 +105,8 @@ export function Navbar() {
           </div>
           <div className={styles.navRight}>
             <div className={styles.link}>
-              <Link href="https://links.geneva.com/invite/966c608a-7309-4a6f-9d7a-2a7cd20f7551">
-                Chat
+              <Link href="https://links.geneva.com/invite/966c608a-7309-4a6f-9d7a-2a7cd20f7551" target="_blank" rel="noopener noreferrer">
+              Chat
               </Link>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function Navbar() {
           </div>
           <div className={styles.navLeft}>
             <div className={styles.link}>
-              <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/">
+              <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer">
                 Greenpaper
               </Link>
             </div>

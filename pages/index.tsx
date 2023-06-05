@@ -147,7 +147,7 @@ const Home: NextPage = () => {
 
               <div className={styles.heroCtaContainer}>
                 <Link className={styles.heroCta} href="/subDAO">
-                Join The DAO (Limited)
+                Join The subDAO (Limited)
                 </Link>
                 
               </div>

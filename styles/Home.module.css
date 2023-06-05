@@ -1,3 +1,19 @@
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  /* CSS styles for mobile devices */
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS styles for tablets */
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  /* CSS styles for desktops */
+}
+
+
 .container {
   min-height: 99vh;
   min-width: 96vw;
@@ -468,4 +484,9 @@
   font-size: 0.6em; /* Adjust to suit your design */
   color: green; /* Adjust color to suit your design */
   vertical-align: sub; /* This isn't strictly necessary as <sup> defaults to this */
+}
+.box {
+  width: 50%; /* Occupy 50% of the parent container's width */
+  margin: 1em; /* Use relative margin */
+  font-size: 1.2rem; /* Use relative font size */
 }
