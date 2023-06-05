@@ -113,7 +113,7 @@ const Home: NextPage = () => {
         <li>You Claim A Token</li>
         <li>Token = Planet Saving Initiative</li>
         <li>Initiative = Revenue</li>
-        <li>Revenue = Shared With Token Owners</li>
+        <li>Profit = Shared With Token Owners</li>
 
       </ol>
       <p>Each token represents a fractionalized share of ownership in the planet-saving
