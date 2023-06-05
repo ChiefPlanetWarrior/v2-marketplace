@@ -48,12 +48,16 @@ const AboutDialog = ({ isOpen, onClose }) => {
         than just a marketplace; it&apos;s the Path to a global community of
         forward-thinking Climate Warriors passionate about shaping a greener, more
         sustainable future.
+        <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer">
+          <strong>Learn More</strong>
+        </Link>
 
-            <div className={styles.link}>
-              <Link href="https://gateway.pinata.cloud/ipfs/QmTmFcqAb4rVkRCvsYzr2sY2eyKxq4teyHJqpDZgSbGpN4" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </Link>
-            </div>
+
+        <div className={styles.link}>
+          <Link href="https://gateway.pinata.cloud/ipfs/QmTmFcqAb4rVkRCvsYzr2sY2eyKxq4teyHJqpDZgSbGpN4" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </Link>
+        </div>
 
       </p>
       <h2> <p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
@@ -80,7 +84,7 @@ export function Navbar() {
   const closeAboutDialog = () => {
     setIsAboutDialogOpen(false);
   };
- 
+
   return (
 
     <div className={styles.navContainer}>
@@ -95,6 +99,11 @@ export function Navbar() {
                 alt="PS2O Logo"
               />
             </Link>
+            <div className={styles.navLeft}>
+              <div className={styles.link} onClick={openAboutDialog}>
+                About
+              </div>
+            </div>
           </div>
           <div className={styles.navRight}>
             <div className={styles.link}>
@@ -106,7 +115,14 @@ export function Navbar() {
           <div className={styles.navRight}>
             <div className={styles.link}>
               <Link href="https://links.geneva.com/invite/966c608a-7309-4a6f-9d7a-2a7cd20f7551" target="_blank" rel="noopener noreferrer">
-              Chat
+                Chat
+              </Link>
+            </div>
+          </div>
+          <div className={styles.navLeft}>
+            <div className={styles.link}>
+              <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer">
+                Greenpaper
               </Link>
             </div>
           </div>
@@ -122,19 +138,9 @@ export function Navbar() {
               </Link>
             </div>
           </div>
-          <div className={styles.navLeft}>
-            <div className={styles.link}>
-              <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer">
-                Greenpaper
-              </Link>
-            </div>
-          </div>
-          <div className={styles.navLeft}>
-            <div className={styles.link} onClick={openAboutDialog}>
-              About
-            </div>
-          </div>
-         </div>
+
+
+        </div>
 
         <div className={styles.navRight}>
           <div className={styles.navConnect}>
@@ -156,7 +162,7 @@ export function Navbar() {
       <AboutDialog isOpen={isAboutDialogOpen} onClose={closeAboutDialog} />
     </div>
 
-    
+
   );
 }
 
