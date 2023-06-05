@@ -80,7 +80,7 @@ export function Navbar() {
   const closeAboutDialog = () => {
     setIsAboutDialogOpen(false);
   };
-
+ 
   return (
 
     <div className={styles.navContainer}>
@@ -134,7 +134,7 @@ export function Navbar() {
               About
             </div>
           </div>
-        </div>
+         </div>
 
         <div className={styles.navRight}>
           <div className={styles.navConnect}>
@@ -155,6 +155,8 @@ export function Navbar() {
       </nav>
       <AboutDialog isOpen={isAboutDialogOpen} onClose={closeAboutDialog} />
     </div>
+
+    
   );
 }
 
