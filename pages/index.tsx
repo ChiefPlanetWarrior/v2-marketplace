@@ -110,22 +110,22 @@ const Home: NextPage = () => {
       {/* Add your modal content here */}
       <h2>How It Works</h2>
       <ol>
-      <li>You Claim A Token</li>
-      <li>Token = Planet Saving Initiative</li>
-      <li>Initiative = Revenue</li>
-      <li>Revenue = Shared With Token Owners</li>
-      
-    </ol>
-      <p>Each token represents a fractionalized share of ownership in the planet-saving 
-        initiative. 
-        As the initiative generates revenue, the owner of the token(s) receive a payout 
-        porportional to the amount of tokens owned... for the life of the initiative.  
+        <li>You Claim A Token</li>
+        <li>Token = Planet Saving Initiative</li>
+        <li>Initiative = Revenue</li>
+        <li>Revenue = Shared With Token Owners</li>
+
+      </ol>
+      <p>Each token represents a fractionalized share of ownership in the planet-saving
+        initiative.
+        As the initiative generates revenue, the owner of the token(s) receive a payout
+        porportional to the amount of tokens owned... for the life of the initiative.
         <br></br><br></br> </p>
-        <h2> <p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
+      <h2> <p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
       <button onClick={closeModal}>Close</button>
     </div>
   );
-  
+
 
 
   return (
@@ -140,51 +140,39 @@ const Home: NextPage = () => {
                 <h2><p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
               </div>
               <div className={styles.content}>
-        <a href="#" onClick={openModal} style={{ textAlign: "left" }}>
-          <h3>How It Works</h3>
-        </a>
-        <Modal
-    isOpen={isModalOpen}
-    onRequestClose={closeModal}
-    contentLabel="How it works"
-    ariaHideApp={false}
-      style={{
-        content: {
-          backgroundColor: "var(--color-background-dark)",
-          color: "black",
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          transform: "translate(-50%, -50%)",
-          border: "none",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-          borderRadius: "4px",
-          padding: "20px",
-        },
-        overlay: {
-          backgroundColor: "darkgrey",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        },
-      }}
-    >
-    {modalContent}
-  </Modal>
-        </div>
-
-
-              {/* ... */}
-              <Modal
-                isOpen={isModalOpen}
-                onRequestClose={closeModal}
-                contentLabel="How it works Modal"
-              >
-                {modalContent}
-              </Modal>
-
-
+                <a href="#" onClick={openModal} style={{ textAlign: "left" }}>
+                  <h3>How It Works</h3>
+                </a>
+                <Modal
+                  isOpen={isModalOpen}
+                  onRequestClose={closeModal}
+                  contentLabel="How it works"
+                  ariaHideApp={false}
+                  style={{
+                    content: {
+                      backgroundColor: "var(--color-background-dark)",
+                      color: "black",
+                      top: "50%",
+                      left: "50%",
+                      right: "auto",
+                      bottom: "auto",
+                      transform: "translate(-50%, -50%)",
+                      border: "none",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+                      borderRadius: "4px",
+                      padding: "20px",
+                    },
+                    overlay: {
+                      backgroundColor: "darkgrey",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    },
+                  }}
+                >
+                  {modalContent}
+                </Modal>
+              </div>
               <div className={galleryStyles.gallery}>
                 {galleryItems.map((item, index) => (
                   <div key={index} className={galleryStyles.galleryItem}>
