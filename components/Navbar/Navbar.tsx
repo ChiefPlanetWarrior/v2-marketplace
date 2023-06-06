@@ -48,7 +48,7 @@ const AboutDialog = ({ isOpen, onClose }) => {
         than just a marketplace; it&apos;s the Path to a global community of
         forward-thinking Climate Warriors passionate about shaping a greener, more
         sustainable future.
-        <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer">
+        <Link href="https://bafybeidayasqwawuaeyevuo2s47akabsondmb5xowuxnbn6pltv6tya4u4.ipfs.dweb.link/" target="_blank" rel="noopener noreferrer">
           <strong>Learn More</strong>
         </Link>
 
