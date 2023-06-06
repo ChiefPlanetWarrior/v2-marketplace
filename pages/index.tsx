@@ -137,7 +137,7 @@ const Home: NextPage = () => {
             <br /><br /><br /><br />
             <div className={styles.heroBody}>
               <div className={styles.heroSubtitle}>
-                <h1 className={styles.pulsatingTitle}>V<sub className={styles.subText}>2</sub> Marketplace<sup className={styles.betaText}>beta</sup></h1>
+                <h1 className={styles.pulsatingTitle}>V<sub className={styles.subText}>2</sub> Marketplace<sup className={styles.betaText}>alpha</sup></h1>
                 <h2><p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
               </div>
               <div className={styles.content}>
