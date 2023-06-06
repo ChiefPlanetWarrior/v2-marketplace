@@ -118,8 +118,9 @@ const Home: NextPage = () => {
       </ol>
       <p>Each token represents a fractionalized share of ownership in the planet-saving
         initiative.
-        As the initiative generates revenue, the owner of the token(s) receive a payout
-        porportional to the amount of tokens owned... for the life of the initiative.
+        As the initiative generates revenue, the owner of the token(s) receives a payout
+        proportional to the number of tokens owned... for the life of the initiative.
+
         <br></br><br></br> </p>
       <h2> <p style={{ textAlign: "center" }}>Own The <span style={{ color: "green" }}>Green</span> Future!</p></h2>
       <button onClick={closeModal}>Close</button>
