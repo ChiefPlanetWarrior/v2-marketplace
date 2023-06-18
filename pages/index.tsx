@@ -28,7 +28,7 @@ const galleryItems = [
   {
     src: "/VPP.png",
     title: "vPower Plant",
-    price: "$1.19",
+    price: "$1.19 Buy-In",
     attributes: [
       { key: "subStation", value: "FL0001" },
       { key: "Rate Type", value: "$ Per kWh" },
@@ -41,7 +41,7 @@ const galleryItems = [
   {
     src: "/Bio-gas.png",
     title: "eGas subSatation",
-    price: "$1.19",
+    price: "$1.19 Buy-In",
     attributes: [
       { key: "VBg subStation", value: "FLA001" },
       { key: "Structure", value: "Commercial" },
@@ -54,7 +54,7 @@ const galleryItems = [
   {
     src: "/Print Farm.png",
     title: "3-D Print Farm",
-    price: "$1.19",
+    price: "$1.19 Buy-In",
     attributes: [
       { key: "Print Parcel", value: "FLB001" },
       { key: "Target", value: "Housing, Ed.,Hosp." },
@@ -67,7 +67,7 @@ const galleryItems = [
   {
     src: "/eMowers.png",
     title: "eMower Squadron",
-    price: "$1.19",
+    price: "$1.19 Buy-In",
     attributes: [
       { key: "Team ID", value: "FLC001" },
       { key: "Rate Type", value: "$ Per acre" },
@@ -81,7 +81,7 @@ const galleryItems = [
     src: "/Aquafarm.png",
     title: "3-D Aquafarm",
     description: "Coming Soon!",
-    price: "$1.19",
+    price: "$1.19 Buy-In",
     attributes: [
       { key: "Wet Parcel", value: "FLD001" },
       { key: "Rate Type", value: "$ Per LB" },
