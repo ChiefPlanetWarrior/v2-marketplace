@@ -80,11 +80,11 @@ const Home: NextPage = () => {
       src: "/VPP.png",
       title: "vPower Plant",
       price: "$1.19 Buy-In",
-      description: <p style={{ textAlign: "left" }}> A Virtual Power Plant, or VPP, is a bit like a team of football players.
+      description:<> <p style={{ textAlign: "left" }}> A Virtual Power Plant, or VPP, is a bit like a team of football players.
         But instead of people, the team is made up of different types of energy sources - like solar
         panels, wind turbines, and even batteries that store energy. Each one by itself may not be able
         to produce or store a lot of energy, but together, they can produce a lot!
-      </p>,
+      </p></>,
       attributes: [
         { key: "subStation", value: "FL0001" },
         { key: "Rate Type", value: "$ Per kWh" },
@@ -98,12 +98,12 @@ const Home: NextPage = () => {
       src: "/Bio-gas.png",
       title: "eGas subSatation",
       price: "$1.19 Buy-In",
-      description: <p style={{ textAlign: "left" }}>An eGas subStation comprises
+      description: <><p style={{ textAlign: "left" }}>An eGas subStation comprises
       commercial & residential digesters connected to produce and sell gas to the grid. 
       Spread out across different locations, these digesters function collectively
       through this digital link, essentially creating an efficient, coordinated digital
       farm for renewable energy production, despite the physical distances between each unit.
-      </p>,
+      </p></>,
       attributes: [
         { key: "eGas subStation", value: "FLA001" },
         { key: "Structure", value: "Commercial" },
