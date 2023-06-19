@@ -131,7 +131,7 @@ const Home: NextPage = () => {
       src: "/eMowers.png",
       title: "eMower Squadron",
       description: "Update Pending",
-      price: "$1.19 Buy-In",
+      price: "$1.19 Buy-In ",
       attributes: [
         { key: "Team ID", value: "FLC001" },
         { key: "Rate Type", value: "$ Per acre" },
