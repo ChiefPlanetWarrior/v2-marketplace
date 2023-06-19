@@ -1,0 +1,99 @@
+const GalleryItem = ({ src, title, price, description, attributes, buttonUrl }) => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+  
+    const openPopup = () => {
+      setIsPopupOpen(true);
+    };
+  
+    const closePopup = () => {
+      setIsPopupOpen(false);
+    };
+  
+    return (
+      <div className={galleryStyles.galleryItem}>
+        <Image src={src} width={200} height={200} alt={title} />
+        <h3 className={galleryStyles.title}>{title}</h3>
+        <h3 className={galleryStyles.price}>{price}</h3>
+        <div className={galleryStyles.descriptionBox}>
+          <p className={galleryStyles.description}>{description}</p>
+        </div>
+        <ul className={galleryStyles.attributes}>
+          {attributes.map((attr, i) => (
+            <li key={i} className={galleryStyles.attribute}>
+              <span className={galleryStyles.attributeKey}>{attr.key}:</span>{" "}
+              <span className={galleryStyles.attributeValue}>{attr.value}</span>
+            </li>
+          ))}
+        </ul>
+        <button className={galleryStyles.button} onClick={openPopup}>Claim Token(s)</button>
+        {isPopupOpen && (
+          <div className={galleryStyles.popup}>
+            <div className={galleryStyles.popupContent}>
+              <h2>{title}</h2>
+              <p>{description}</p>
+              <ul className={galleryStyles.popupAttributes}>
+                {attributes.map((attr, i) => (
+                  <li key={i}>
+                    <span>{attr.key}:</span> {attr.value}
+                  </li>
+                ))}
+              </ul>
+              <Link href={buttonUrl}>
+                <button className={galleryStyles.popupButton}>Claim Token(s)</button>
+              </Link>
+              <button className={galleryStyles.closeButton} onClick={closePopup}>
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+/**
+ * <div className={galleryStyles.gallery}>
+                  {galleryItems.map((item, index) => (
+                    <div key={index} className={galleryStyles.galleryItem}>
+                      <Image src={item.src} width={200} height={200} alt={item.title} />
+                      <h3 className={galleryStyles.title}>{item.title}</h3>
+                      <h3 className={galleryStyles.price}>{item.price}</h3>
+                      <div className={galleryStyles.descriptionBox}>
+                        <p className={galleryStyles.description}>{item.description}</p>
+                      </div>
+                      <ul className={galleryStyles.attributes}>
+                        {item.attributes.map((attr, i) => (
+                          <li key={i} className={galleryStyles.attribute}>
+                            <span className={galleryStyles.attributeKey}>{attr.key}:</span>{" "}
+                            <span className={galleryStyles.attributeValue}>{attr.value}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={item.buttonUrl}>
+                        <button className={galleryStyles.button}>Claim Token(s)</button>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+                {isPopupOpen && (
+                  <div className={galleryStyles.popup}>
+                    <div className={galleryStyles.popupContent}>
+                      <h2>{title}</h2>
+                      <p>{description}</p>
+                      <ul className={galleryStyles.popupAttributes}>
+                        {attributes.map((attr, i) => (
+                          <li key={i}>
+                            <span>{attr.key}:</span> {attr.value}
+                          </li>
+                        ))}
+                      </ul>
+                      <Link href={buttonUrl}>
+                        <button className={galleryStyles.popupButton}>Claim Token(s)</button>
+                      </Link>
+                      <button className={galleryStyles.closeButton} onClick={closePopup}>
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                  )}
+ */

@@ -61,12 +61,14 @@
   margin-top: 0.5rem;
 }
 
+
 .description {
+  color: #fff;
+  font-size: 16px;
   text-align: center;
-  margin-top: 0.1rem;
-  max-width: 30%; /* Add this line to limit the description width */
-  word-wrap: break-word; /* Add this line to wrap text if needed */
+  padding: 10px;
 }
+
 
 .price {
   text-align: center;
