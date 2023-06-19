@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import React from "react";
 import galleryStyles from "../styles/Gallery.module.css";
 import Modal from "react-modal";
@@ -21,7 +21,7 @@ interface GalleryItemProps {
   src: string;
   title: string;
   price: string;
-  description: string;
+  description: ReactNode;
   attributes: { key: string; value: string }[];
   buttonUrl: string;
 }
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
       src: "/VPP.png",
       title: "vPower Plant",
       price: "$1.19 Buy-In",
-      description:(<p style={{ textAlign: "left" }}> A Virtual Power Plant, or VPP, is a bit like a team of football players.
+      description: (<p style={{ textAlign: "left" }}> A Virtual Power Plant, or VPP, is a bit like a team of football players.
         But instead of people, the team is made up of different types of energy sources - like solar
         panels, wind turbines, and even batteries that store energy. Each one by itself may not be able
         to produce or store a lot of energy, but together, they can produce a lot!
@@ -99,10 +99,10 @@ const Home: NextPage = () => {
       title: "eGas subSatation",
       price: "$1.19 Buy-In",
       description: (<><p style={{ textAlign: "left" }}>An eGas subStation comprises
-      commercial & residential digesters connected to produce and sell gas to the grid. 
-      Spread out across different locations, these digesters function collectively
-      through this digital link, essentially creating an efficient, coordinated digital
-      farm for renewable energy production, despite the physical distances between each unit.
+        commercial & residential digesters connected to produce and sell gas to the grid.
+        Spread out across different locations, these digesters function collectively
+        through this digital link, essentially creating an efficient, coordinated digital
+        farm for renewable energy production, despite the physical distances between each unit.
       </p></>),
       attributes: [
         { key: "eGas subStation", value: "FLA001" },
